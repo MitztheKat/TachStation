@@ -477,6 +477,18 @@
 	safe_toxins_max = 0
 	maxHealth = INFINITY//I don't understand how plamamen work, so I'm not going to try t give them special lungs atm
 
+/obj/item/organ/lungs/xx
+	name = "air filter"
+	desc = "A sponge mass for filtering gases in the air."
+	icon_state = "lungs-xeno"
+
+	safe_oxygen_min = 1
+	safe_oxygen_max = 170
+	safe_toxins_min = 0
+	safe_toxins_max = 0
+	maxHealth = 350
+	healing_factor = 0.4
+
 /obj/item/organ/lungs/cybernetic
 	name = "cybernetic lungs"
 	desc = "A cybernetic version of the lungs found in traditional humanoid entities. It functions the same as an organic lung and is merely meant as a replacement."
@@ -530,6 +542,7 @@
 	cold_level_1_threshold = 285 // Remember when slimes used to be succeptable to cold? Well....
 	cold_level_2_threshold = 260
 	cold_level_3_threshold = 230
+	healing_factor = 1.005
 
 	maxHealth = 250
 

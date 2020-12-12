@@ -95,11 +95,22 @@
 /obj/item/organ/liver/plasmaman
 	name = "reagent processing crystal"
 	icon_state = "liver-p"
-	desc = "A large crystal that is somehow capable of metabolizing chemicals, these are found in plasmamen."
+	desc = "A large crystal that is somehow capable of metabolizing chemicals."
+	filterToxins = TRUE
+	healing_factor = 0.4
 
 /obj/item/organ/liver/ipc
 	name = "reagent processing liver"
 	icon_state = "liver-c"
+
+
+/obj/item/organ/liver/xx
+	name = "Toxin Filter"
+	icon_state = "liver-xeno"
+	alcohol_tolerance = 2
+	toxTolerance = 50
+	filterToxins = TRUE
+	healing_factor = 0.4
 
 /obj/item/organ/liver/cybernetic
 	name = "cybernetic liver"

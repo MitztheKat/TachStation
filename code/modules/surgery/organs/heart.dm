@@ -96,10 +96,11 @@
 		failed = TRUE
 
 obj/item/organ/heart/slime
-	name = "slime heart"
-	desc = "It seems we've gotten to the slimy core of the matter."
+	name = "Squish heart"
+	desc = "It seems we've gotten to the core of the matter."
 	icon_state = "heart-s-on"
 	icon_base = "heart-s"
+	healing_factor = 0.5
 
 /obj/item/organ/heart/cursed
 	name = "cursed heart"
@@ -225,6 +226,14 @@ obj/item/organ/heart/cybernetic/upgraded/on_life()
 	name = "IPC heart"
 	desc = "An electronic pump that regulates hydraulic functions, the electronics have EMP shielding."
 	icon_state = "heart-c"
+
+
+/obj/item/organ/heart/xx
+	name = "Xeno heart"
+	desc = "an strange pulsating heart."
+	icon_state = "heart-xx"
+	healing_factor = 0.4
+
 
 /obj/item/organ/heart/ipc
 	name = "IPC heart"
