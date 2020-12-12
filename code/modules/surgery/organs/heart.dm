@@ -229,7 +229,7 @@ obj/item/organ/heart/cybernetic/upgraded/on_life()
 
 
 /obj/item/organ/heart/xx
-	name = "Xeno heart"
+	name = "Xeno Heart"
 	desc = "an strange pulsating heart."
 	icon_state = "blacktumor"
 	healing_factor = 0.4
