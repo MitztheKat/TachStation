@@ -154,6 +154,16 @@
 	see_in_dark = 8
 	sight_flags = SEE_MOBS | SEE_OBJS | SEE_TURFS
 
+/obj/item/organ/eyes/xx
+	name = "Xenomorphic Eyes"
+	desc = "Eww, It has pulsating goo."
+	eye_color = "000"
+	see_in_dark = 4
+	flash_protect = -1
+	sight_flags = SEE_MOBS
+	healing_factor = 0.4
+	icon_state = "ling_thermal"
+
 /obj/item/organ/eyes/robotic/thermals
 	name = "thermal eyes"
 	desc = "These cybernetic eye implants will give you thermal vision. Vertical slit pupil included."
@@ -198,6 +208,7 @@
 	name = "shielded robotic eyes"
 	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
 	flash_protect = 2
+
 
 /obj/item/organ/eyes/robotic/shield/emp_act(severity)
 	return

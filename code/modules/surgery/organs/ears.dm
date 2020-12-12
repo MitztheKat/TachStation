@@ -118,6 +118,14 @@
 	damage_multiplier = 0.1 //STRONK
 	bang_protect = 1 //Fear me weaklings.
 
+/obj/item/organ/ears/xx
+	name = "purple ears"
+	desc = "an strange set of ears."
+	icon_state = "hivenode"
+	damage_multiplier = 2.0
+	bang_protect = -1
+	healing_factor = 0.4
+
 /obj/item/organ/ears/cybernetic
 	name = "cybernetic ears"
 	icon_state = "ears-c"

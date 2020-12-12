@@ -210,11 +210,30 @@
 	// A cloning mistake, crossing human and xenomorph DNA
 	name = "Xeno Hybrid"
 	id = "xeno"
+	brutemod = 3
+	burnmod = 3.5
+	coldmod = -0.5
+	speedmod = -0.25
+	heatmod = 4.5
+	punchdamagelow = 10
+	punchdamagehigh = 19
+	punchstunthreshold = 15
+	siemens_coeff = -2
 	say_mod = "hisses"
+	mutant_heart = /obj/item/organ/heart/slime
+	mutantlungs = /obj/item/organ/lungs/slime
+	mutantliver = /obj/item/organ/liver/plasmaman
+	mutantstomach = /obj/item/organ/stomach/plasmaman
+	mutanteyes = /obj/item/organ/eyes/xx
+	mutanttongue = /obj/item/organ/tongue/alien
+	mutantears = /obj/item/organ/ears/xx
+	mutant_brain = /obj/item/organ/brain/alien
+	mutant_organs = list(/obj/item/organ/alien/hivenode,/obj/item/organ/alien/acid,/obj/item/organ/alien/plasmavessel/large,/obj/item/organ/alien/neurotoxin,/obj/item/organ/alien/resinspinner)
 	default_color = "00FF00"
 	icon_limbs = DEFAULT_BODYPART_ICON_CITADEL
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,WINGCOLOR)
-	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
+	inherent_biotypes = list(MOB_ORGANIC , MOB_HUMANOID)
+	inherent_traits = list(TRAIT_RESISTLOWPRESSURE,TRAIT_RESISTCOLD,TRAIT_THERMAL_VISION)
 	mutant_bodyparts = list("xenotail", "xenohead", "xenodorsal", "mam_body_markings", "taur", "legs", "deco_wings")
 	default_features = list("xenotail"="Xenomorph Tail","xenohead"="Standard","xenodorsal"="Standard", "mam_body_markings" = "Xeno","mcolor" = "0F0","mcolor2" = "0F0","mcolor3" = "0F0","taur" = "None", "legs" = "Digitigrade Legs", "deco_wings" = "None")
 	attack_verb = "slash"
@@ -225,7 +244,8 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/xeno
 	exotic_bloodtype = "X*"
 	damage_overlay_type = "xeno"
-	liked_food = MEAT
+	disliked_food = NONE
+	liked_food = GROSS | MEAT | RAW
 
 /datum/species/xeno/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
 	C.grant_language(/datum/language/xenocommon)

@@ -92,11 +92,17 @@
 	icon_state = "stomach-x" //xenomorph liver? It's just a black liver so it fits.
 	desc = "A mutant stomach designed to handle the unique diet of a flyperson."
 
+/obj/item/organ/stomach/xx
+	name = "Xeno stomach"
+	icon_state = "stomach-x" //xenomorph liver? It's just a black liver so it fits.
+	desc = "A mutant stomach designed to handle the unique diet of a xenomorph."
+	healing_factor = 0.4
+
 /obj/item/organ/stomach/plasmaman
 	name = "digestive crystal"
 	icon_state = "stomach-p"
-	desc = "A strange crystal that is responsible for metabolizing the unseen energy force that feeds plasmamen."
-
+	desc = "A strange crystal that is responsible for metabolizing."
+	healing_factor = 0.4
 /obj/item/organ/stomach/ipc
 	name = "ipc stomach"
 	icon_state = "stomach-ipc"
