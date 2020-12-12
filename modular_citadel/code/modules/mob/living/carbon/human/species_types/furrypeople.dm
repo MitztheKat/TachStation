@@ -210,7 +210,7 @@
 	// A cloning mistake, crossing human and xenomorph DNA
 	name = "Xeno Hybrid"
 	id = "xeno"
-	brutemod = 2
+	brutemod = 3
 	burnmod = 3.5
 	coldmod = -0.5
 	speedmod = -0.25
