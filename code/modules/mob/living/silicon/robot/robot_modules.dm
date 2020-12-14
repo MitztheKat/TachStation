@@ -91,7 +91,8 @@
 		/obj/item/stack/sheet,
 		/obj/item/stack/tile,
 		/obj/item/stack/rods,
-		/obj/item/stock_parts
+		/obj/item/stock_parts,
+		/obj/item/stack/cable_coil
 		)
 	//Basically a blacklist for any subtypes above we dont want
 	var/list/cannot_hold = list(
@@ -472,11 +473,9 @@
 		/obj/item/reagent_containers/dropper,
 		/obj/item/reagent_containers/syringe,
 		/obj/item/surgical_drapes,
-		/obj/item/scalpel,
-		/obj/item/retractor,
-		/obj/item/hemostat,
+		/obj/item/scalpel/advanced,
+		/obj/item/hemostat/advanced,
 		/obj/item/cautery,
-		/obj/item/circular_saw,
 		/obj/item/surgicaldrill,
 		/obj/item/extinguisher/mini,
 		/obj/item/soap/nanotrasen,
@@ -506,11 +505,8 @@
 		/obj/item/pipe_dispenser,
 		/obj/item/extinguisher,
 		/obj/item/weldingtool/largetank/cyborg,
-		/obj/item/screwdriver/cyborg,
-		/obj/item/wrench/cyborg,
-		/obj/item/crowbar/cyborg,
-		/obj/item/wirecutters/cyborg,
-		/obj/item/multitool/cyborg,
+		/obj/item/crowbar/power,
+		/obj/item/screwdriver/power,
 		/obj/item/t_scanner,
 		/obj/item/analyzer,
 		/obj/item/soap/nanotrasen,

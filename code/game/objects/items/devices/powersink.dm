@@ -1,4 +1,4 @@
-// Powersink - used to drain station power
+	// Powersink - used to drain station power
 
 /obj/item/powersink
 	desc = "A nulling power sink which drains energy from electrical systems."
@@ -57,7 +57,7 @@
 	set_light(0)
 
 /obj/item/powersink/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/screwdriver))
+	if(I.tool_behaviour == TOOL_SCREWDRIVER)
 		if(mode == DISCONNECTED)
 			var/turf/T = loc
 			if(isturf(T) && !T.intact)
