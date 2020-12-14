@@ -201,7 +201,7 @@
 					update_icon()
 					return
 
-				if(P.tool_behaviour == TOOL_CROWBAR) && brain)
+				if(P.tool_behaviour == TOOL_CROWBAR && brain)
 					P.play_tool_sound(src)
 					to_chat(user, "<span class='notice'>You remove the brain.</span>")
 					brain.forceMove(loc)

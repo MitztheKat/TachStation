@@ -701,7 +701,7 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 	framestackamount = 1
 
 /obj/structure/table_frame/abductor/attackby(obj/item/I, mob/user, params)
-	if(W.tool_behaviour == TOOL_WRENCH)
+	if(I.tool_behaviour == TOOL_WRENCH)
 		to_chat(user, "<span class='notice'>You start disassembling [src]...</span>")
 		I.play_tool_sound(src)
 		if(I.use_tool(src, user, 30))

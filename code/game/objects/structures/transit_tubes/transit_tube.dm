@@ -50,7 +50,7 @@
 				transfer_fingerprints_to(R)
 				R.add_fingerprint(user)
 				qdel(src)
-	else if(I.tool_behaviour == TOOL_CROWBAR)
+	else if(W.tool_behaviour == TOOL_CROWBAR)
 		for(var/obj/structure/transit_tube_pod/pod in src.loc)
 			pod.attackby(W, user)
 	else

@@ -29,9 +29,7 @@
 			return
 
 		if(panel_open)
-			if(I.tool_behaviour == TOOL_MULTITOOL)
-				if(!multitool_check_buffer(user, I))
-					return
+			if(istype(I, /obj/item/multitool))
 				var/obj/item/multitool/M = I
 				M.buffer = src
 				to_chat(user, "<span class='notice'>You save the data in the [I.name]'s buffer.</span>")

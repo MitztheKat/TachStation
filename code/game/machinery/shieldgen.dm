@@ -147,7 +147,7 @@
 	return
 
 /obj/machinery/shieldgen/attackby(obj/item/W, mob/user, params)
-	ifif(W.tool_behaviour == TOOL_SCREWDRIVER)
+	if(W.tool_behaviour == TOOL_SCREWDRIVER)
 		W.play_tool_sound(src, 100)
 		panel_open = !panel_open
 		if(panel_open)

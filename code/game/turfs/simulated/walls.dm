@@ -255,7 +255,7 @@
 	return FALSE
 
 /turf/closed/wall/proc/try_decon(obj/item/I, mob/user, turf/T)
-	if(W.tool_behaviour == TOOL_WELDER || istype(I, /obj/item/gun/energy/plasmacutter))
+	if(I.tool_behaviour == TOOL_WELDER)
 		if(!I.tool_start_check(user, amount=0))
 			return FALSE
 

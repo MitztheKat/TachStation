@@ -368,9 +368,9 @@
 			return TRUE
 	else if(istype(W, /obj/item/electronics/airlock))
 		handle_lock_addition(user, W)
-	else if(istype(W.tool_behaviour == TOOL_SCREWDRIVER)
+	else if(W.tool_behaviour == TOOL_SCREWDRIVER)
 		handle_lock_removal(user, W)
-	else if(istype(W.tool_behaviour == TOOL_WELDER) && can_weld_shut)
+	else if(W.tool_behaviour == TOOL_WELDER && can_weld_shut)
 		if(!W.tool_start_check(user, amount=0))
 			return
 

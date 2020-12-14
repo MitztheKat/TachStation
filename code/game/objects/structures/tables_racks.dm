@@ -371,7 +371,7 @@
 		to_chat(user, "<span class='notice'>The top cover is firmly <b>welded</b> on.</span>")
 
 /obj/structure/table/reinforced/attackby(obj/item/W, mob/user, params)
-	if(I.tool_behaviour == TOOL_WELDER)
+	if(W.tool_behaviour == TOOL_WELDER)
 		if(!W.tool_start_check(user, amount=0))
 			return
 

@@ -63,7 +63,7 @@
 				build_step = PTURRET_INTERNAL_ARMOUR_ON
 				return
 
-			else if(I.tool_behaviour == TOOL_WELDING)
+			else if(istype(I, /obj/item/weldingtool))
 				if(!I.tool_start_check(user, amount=5)) //uses up 5 fuel
 					return
 
@@ -127,7 +127,7 @@
 				return
 
 		if(PTURRET_START_EXTERNAL_ARMOUR)
-			if(I.tool_behaviour == TOOL_WELDING)
+			if(istype(I, /obj/item/weldingtool))
 				if(!I.tool_start_check(user, amount=5))
 					return
 

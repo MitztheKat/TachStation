@@ -18,9 +18,7 @@
 	return
 
 /obj/machinery/computer/launchpad/attackby(obj/item/W, mob/user, params)
-	else if(W.tool_behaviour == TOOL_MULTITOOL)
-		if(!multitool_check_buffer(user, W))
-			return
+	if(istype(W, /obj/item/multitool))
 		var/obj/item/multitool/M = W
 		if(M.buffer && istype(M.buffer, /obj/machinery/launchpad))
 			if(LAZYLEN(launchpads) < maximum_pads)
@@ -134,7 +132,7 @@
 		if(!new_name)
 			return
 		pad.display_name = new_name
-	
+
 	if(href_list["setx"])
 		var/newx = input(usr, "Input new x offset", pad.display_name, pad.x_offset) as null|num
 		if(!isnull(newx))

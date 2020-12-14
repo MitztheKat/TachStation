@@ -213,7 +213,7 @@ GLOBAL_LIST_EMPTY(gravity_generators) // We will keep track of this by adding ne
 					to_chat(user, "<span class='warning'>You need 10 sheets of plasteel!</span>")
 				return
 		if(GRAV_NEEDS_WRENCH)
-			if(O.tool_behaviour == TOOL_WRENCH)
+			if(I.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "<span class='notice'>You secure the plating to the framework.</span>")
 				I.play_tool_sound(src)
 				set_fix()

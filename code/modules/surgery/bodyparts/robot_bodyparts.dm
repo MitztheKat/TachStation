@@ -19,7 +19,7 @@
 	flags_1 = CONDUCT_1
 	icon_state = "borg_l_arm"
 	status = BODYPART_ROBOTIC
-	
+
 	brute_reduction = 2
 	burn_reduction = 1
 
@@ -40,7 +40,7 @@
 	flags_1 = CONDUCT_1
 	icon_state = "borg_r_arm"
 	status = BODYPART_ROBOTIC
-	
+
 	brute_reduction = 2
 	burn_reduction = 1
 
@@ -61,7 +61,7 @@
 	flags_1 = CONDUCT_1
 	icon_state = "borg_l_leg"
 	status = BODYPART_ROBOTIC
-	
+
 	brute_reduction = 2
 	burn_reduction = 1
 
@@ -82,7 +82,7 @@
 	flags_1 = CONDUCT_1
 	icon_state = "borg_r_leg"
 	status = BODYPART_ROBOTIC
-	
+
 	brute_reduction = 2
 	burn_reduction = 1
 
@@ -102,7 +102,7 @@
 	flags_1 = CONDUCT_1
 	icon_state = "borg_chest"
 	status = BODYPART_ROBOTIC
-	
+
 	brute_reduction = 2
 	burn_reduction = 1
 
@@ -164,7 +164,7 @@
 	flags_1 = CONDUCT_1
 	icon_state = "borg_head"
 	status = BODYPART_ROBOTIC
-	
+
 	brute_reduction = 5
 	burn_reduction = 4
 
@@ -198,7 +198,7 @@
 			else
 				src.flash1 = F
 			to_chat(user, "<span class='notice'>You insert the flash into the eye socket.</span>")
-	else if(I.tool_behaviour == TOOL_CROWBAR)
+	else if(W.tool_behaviour == TOOL_CROWBAR)
 		if(flash1 || flash2)
 			W.play_tool_sound(src)
 			to_chat(user, "<span class='notice'>You remove the flash from [src].</span>")

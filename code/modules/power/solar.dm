@@ -200,7 +200,7 @@
 
 
 /obj/item/solar_assembly/attackby(obj/item/W, mob/user, params)
-	if(I.tool_behaviour == TOOL_WRENCH && isturf(loc))
+	if(W.tool_behaviour == TOOL_WRENCH && isturf(loc))
 		if(isinspace())
 			to_chat(user, "<span class='warning'>You can't secure [src] here.</span>")
 			return
