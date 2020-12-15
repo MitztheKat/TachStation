@@ -7,14 +7,14 @@
 	add_fingerprint(user)
 	switch(state)
 		if(0)
-			 if(P.tool_behaviour == TOOL_WRENCH)
+			if(P.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "<span class='notice'>You start wrenching the frame into place...</span>")
 				if(P.use_tool(src, user, 20, volume=50))
 					to_chat(user, "<span class='notice'>You wrench the frame into place.</span>")
 					setAnchored(TRUE)
 					state = 1
 				return
- 			if(P.tool_behaviour == TOOL_WELDER)
+ 			if(istype(P, /obj/item/weldingtool))
 				if(!P.tool_start_check(user, amount=0))
 					return
 
@@ -25,8 +25,9 @@
 					M.add_fingerprint(user)
 					qdel(src)
 				return
+				
 		if(1)
-			 if(P.tool_behaviour == TOOL_WRENCH)
+			if(P.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "<span class='notice'>You start to unfasten the frame...</span>")
 				if(P.use_tool(src, user, 20, volume=50))
 					to_chat(user, "<span class='notice'>You unfasten the frame.</span>")
