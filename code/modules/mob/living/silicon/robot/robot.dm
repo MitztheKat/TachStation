@@ -1190,7 +1190,7 @@
 
 /mob/living/silicon/robot/MouseDrop_T(mob/living/M, mob/living/user)
 	. = ..()
-	if(!(M in buckled_mobs) && isliving(M))
+	if(can_buckle && istype(M) && !(M in buckled_mobs) && ((user!=src)||(a_intent != INTENT_HARM)))
 		buckle_mob(M)
 
 /mob/living/silicon/robot/buckle_mob(mob/living/M, force = FALSE, check_loc = TRUE)
@@ -1225,6 +1225,14 @@
 			riding_datum.unequip_buckle_inhands(user)
 			riding_datum.restore_position(user)
 	. = ..(user)
+
+/mob/living/silicon/robot/resist()
+	. = ..()
+	if(!buckled_mobs.len)
+		return
+	for(var/i in buckled_mobs)
+		var/mob/unbuckle_me_now = i
+		unbuckle_mob(unbuckle_me_now, FALSE)
 
 /mob/living/silicon/robot/proc/TryConnectToAI()
 	connected_ai = select_active_ai_with_fewest_borgs()

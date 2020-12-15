@@ -14,7 +14,7 @@
 					setAnchored(TRUE)
 					state = 1
 				return
- 			if(istype(P, /obj/item/weldingtool))
+			if(istype(P, /obj/item/weldingtool))
 				if(!P.tool_start_check(user, amount=0))
 					return
 
@@ -25,7 +25,6 @@
 					M.add_fingerprint(user)
 					qdel(src)
 				return
-				
 		if(1)
 			if(P.tool_behaviour == TOOL_WRENCH)
 				to_chat(user, "<span class='notice'>You start to unfasten the frame...</span>")
