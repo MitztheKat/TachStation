@@ -134,7 +134,6 @@
 			src.updateUsrDialog()
 	else if(istype(W, /obj/item/multitool))
 		var/obj/item/multitool/P = W
-
 		if(istype(P.buffer, /obj/machinery/clonepod))
 			if(get_area(P.buffer) != get_area(src))
 				to_chat(user, "<font color = #666633>-% Cannot link machines across power zones. Buffer cleared %-</font color>")

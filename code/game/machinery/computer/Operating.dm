@@ -43,6 +43,11 @@
 		if(table)
 			table.computer = src
 			break
+		else
+			table = locate(/obj/machinery/stasis, get_step(src, direction))
+			if(table)
+				table.computer = src
+				break
 
 /obj/machinery/computer/operating/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.not_incapacitated_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)

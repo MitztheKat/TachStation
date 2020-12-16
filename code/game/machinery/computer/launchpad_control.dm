@@ -132,7 +132,7 @@
 		if(!new_name)
 			return
 		pad.display_name = new_name
-	
+
 	if(href_list["setx"])
 		var/newx = input(usr, "Input new x offset", pad.display_name, pad.x_offset) as null|num
 		if(!isnull(newx))
