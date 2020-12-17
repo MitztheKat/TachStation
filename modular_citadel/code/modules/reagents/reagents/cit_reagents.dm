@@ -133,7 +133,7 @@
 	taste_description = "strawberry roofies"
 	taste_mult = 2 //Hide the roofies in stronger flavors
 	color = "#FFADFF"//PINK, rgb(255, 173, 255)
-
+/*
 /datum/reagent/drug/aphrodisiac/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && !HAS_TRAIT(M, TRAIT_CROCRIN_IMMUNE))
 		if(prob(33))
@@ -144,7 +144,7 @@
 			var/aroused_message = pick("You feel frisky.", "You're having trouble suppressing your urges.", "You feel in the mood.")
 			to_chat(M, "<span class='userlove'>[aroused_message]</span>")
 	..()
-
+*/
 /datum/reagent/drug/aphrodisiacplus
 	name = "Hexacrocin"
 	id = "aphro+"
@@ -155,7 +155,7 @@
 	color = "#FF2BFF"//dark pink
 	addiction_threshold = 20
 	overdose_threshold = 20
-
+/*
 /datum/reagent/drug/aphrodisiacplus/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && !HAS_TRAIT(M, TRAIT_CROCRIN_IMMUNE))
 		if(prob(33))
@@ -199,7 +199,7 @@
 			M.min_arousal += 1
 		M.adjustArousalLoss(2)
 	..()
-
+*/
 /datum/reagent/drug/anaphrodisiac
 	name = "Camphor"
 	id = "anaphro"
@@ -208,13 +208,13 @@
 	taste_description = "dull bitterness"
 	taste_mult = 2
 	color = "#D9D9D9"//rgb(217, 217, 217)
-	reagent_state = SOLID
+/*	reagent_state = SOLID
 
 /datum/reagent/drug/anaphrodisiac/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && prob(33))
 		M.adjustArousalLoss(-2)
 	..()
-
+*/
 /datum/reagent/drug/anaphrodisiacplus
 	name = "Hexacamphor"
 	id = "anaphro+"
@@ -223,7 +223,7 @@
 	color = "#D9D9D9"//rgb(217, 217, 217)
 	reagent_state = SOLID
 	overdose_threshold = 20
-
+/*
 /datum/reagent/drug/anaphrodisiacplus/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && prob(33))
 		M.adjustArousalLoss(-4)
@@ -270,3 +270,4 @@
 	required_reagents = list("anaphro" = 5, "acetone" = 1)
 	required_temp = 300
 	mix_message = "The mixture thickens and heats up slighty..."
+*/

@@ -10,7 +10,7 @@
 	var/mb_cd_timer = 0									//The timer itself
 
 /mob/living/carbon/human
-	canbearoused = TRUE
+	canbearoused = FALSE
 
 	var/saved_underwear = ""//saves their underwear so it can be toggled later
 	var/saved_undershirt = ""
@@ -59,7 +59,7 @@
 
 	else
 		to_chat(src, "Humans only. How the fuck did you get this verb anyway.")
-
+/*
 /mob/living/proc/handle_arousal()
 
 
@@ -708,3 +708,4 @@
 					return
 			else //Somehow another option was taken, maybe something interrupted the selection or it was cancelled
 				return //Just end it in that case.
+*/

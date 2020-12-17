@@ -1,4 +1,4 @@
-/obj/item/organ/genital/testicles
+/*/obj/item/organ/genital/testicles
 	name 					= "testicles"
 	desc 					= "A male reproductive organ."
 	icon_state 				= "testicles"
@@ -100,3 +100,4 @@
 			var/mob/living/carbon/human/H = owner
 			icon_state = sanitize_text(string)
 			H.update_genitals()
+*/

@@ -1,4 +1,4 @@
-/obj/item/pregnancytest
+/*/obj/item/pregnancytest
 	name 				= "pregnancy test"
 	desc 				= "A one time use small device, used to determine whether someone is pregnant or not."
 	icon 				= 'hyperstation/icons/obj/pregnancytest.dmi'
@@ -41,3 +41,4 @@
 		to_chat(user, "<span class='notice'>You use the pregnancy test, the display reads positive!</span>")
 	else
 		force(user)
+		*/

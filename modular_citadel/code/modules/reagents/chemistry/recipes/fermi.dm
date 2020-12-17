@@ -165,7 +165,7 @@
 	for(var/mob/M in seen)
 		to_chat(M, "<span class='warning'>The cells clump up into a horrifying tumour!</span>")
 
-/datum/chemical_reaction/fermi/breast_enlarger
+/*/datum/chemical_reaction/fermi/breast_enlarger
 	name = "Sucubus milk"
 	id = "breast_enlarger"
 	results = list("breast_enlarger" = 0.8)
@@ -243,7 +243,7 @@
 	if(PE.purity < 0.35)
 		holder.remove_reagent(src.id, cached_volume)
 		holder.add_reagent("PEsmaller", cached_volume)
-
+*/
 /datum/chemical_reaction/fermi/astral
 	name = "Astrogen"
 	id = "astral"
@@ -266,7 +266,7 @@
 	FermiExplode 			= TRUE
 	PurityMin 				= 0.25
 
-
+/*
 /datum/chemical_reaction/fermi/enthrall/ //check this
 	name = "MKUltra"
 	id = "enthrall"
@@ -345,7 +345,7 @@
 	s.set_up(R, volume/2, T)
 	s.start()
 	my_atom.reagents.clear_reagents()
-
+*/
 /datum/chemical_reaction/fermi/hatmium // done
 	name = "Hat growth serum"
 	id = "hatmium"

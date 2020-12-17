@@ -44,7 +44,7 @@ mob/living/get_effective_size()
 	if(size_multiplier == previous_size)
 		return 1
 	src.update_transform() //WORK DAMN YOU
-	src.update_mobsize() 
+	src.update_mobsize()
 	//Going to change the health and speed values too
 	src.remove_movespeed_modifier(MOVESPEED_ID_SIZE)
 	src.add_movespeed_modifier(MOVESPEED_ID_SIZE, multiplicative_slowdown = (abs(size_multiplier - 1) * 0.8 ))
@@ -53,13 +53,6 @@ mob/living/get_effective_size()
 	var/healthchange = healthmod_new - healthmod_old //Get ready to apply the new value, and subtract the old one. (Negative values become positive)
 	src.maxHealth += healthchange
 	src.health += healthchange
-	if(iscarbon(src))
-		var/mob/living/carbon/C = src
-		for(var/obj/item/organ/genital/G in C.internal_organs)
-			G.update_appearance()
-	//if(src.size_multiplier >= RESIZE_A_HUGEBIG || src.size_multiplier <= RESIZE_A_TINYMICRO) Will remove clothing when too big or small. Will do later.
-	previous_size = size_multiplier //And, change this now that we are finally done.
-
 //handle the big steppy, except nice
 /mob/living/proc/handle_micro_bump_helping(var/mob/living/tmob)
 	if(ishuman(src))
@@ -67,7 +60,7 @@ mob/living/get_effective_size()
 
 		if(tmob.pulledby == H)
 			return 0
-		
+
 		//Micro is on a table.
 		var/turf/steppyspot = tmob.loc
 		for(var/thing in steppyspot.contents)
@@ -215,7 +208,7 @@ mob/living/get_effective_size()
 		mob_size = 2 //the default human size
 	if(size_multiplier > 1)
 		mob_size = 3
-			
+
 //Proc for instantly grabbing valid size difference. Code optimizations soon(TM)
 /*
 /mob/living/proc/sizeinteractioncheck(var/mob/living/tmob)

@@ -183,14 +183,7 @@ GENE SCANNER
 				msg += "\t<span class='danger'>Subject is suffering from acute emphysema leading to trouble breathing.</span>\n" //i.e. Their lungs are shot
 		else
 			msg += "\t<span class='danger'>Subject's lungs have collapsed from trauma!</span>\n"
-		var/obj/item/organ/genital/penis/P = H.getorganslot("penis")
-		if(P)
-			if(P.length>20)
-				msg += "\t<span class='info'>Subject has a sizeable gentleman's organ at [P.length] inches.</span>\n"
-		var/obj/item/organ/genital/breasts/Br = H.getorganslot("breasts")
-		if(Br)
-			if(Br.cached_size>5)
-				msg += "\t<span class='info'>Subject has a sizeable bosom with a [Br.size] cup.</span>\n"
+	//	var/obj/item/organ/genital/penis/P = H.getorganslot("penis")
 		if (M.getOrganLoss(ORGAN_SLOT_BRAIN) >= 200 || !M.getorgan(/obj/item/organ/brain))
 			msg += "\t<span class='alert'>Subject's brain function is non-existent.</span>\n"
 		else if (M.getOrganLoss(ORGAN_SLOT_BRAIN) >= 120)
@@ -228,9 +221,9 @@ GENE SCANNER
 		msg += "\t<span class='info'>Subject is hallucinating.</span>\n"
 
 	//MKUltra
-	if(advanced && M.has_status_effect(/datum/status_effect/chem/enthrall))
+/*	if(advanced && M.has_status_effect(/datum/status_effect/chem/enthrall))
 		msg += "\t<span class='info'>Subject has abnormal brain fuctions.</span>\n"
-
+*/
 	//Astrogen shenanigans
 	if(advanced && M.reagents.has_reagent("astral"))
 		if(M.mind)

@@ -17,7 +17,7 @@
 //(see the status effect in chem.dm)
 //Overdosing on (what is essentially space estrogen) makes you female, removes balls and shrinks your dick.
 //OD is low for a reason. I'd like fermichems to have low ODs, and dangerous ODs, and since this is a meme chem that everyone will rush to make, it'll be a lesson learnt early.
-
+/*
 /datum/reagent/fermi/breast_enlarger
 	name = "Succubus milk"
 	id = "breast_enlarger"
@@ -102,7 +102,7 @@
 			var/obj/item/clothing/suit = H.get_item_by_slot(SLOT_W_UNIFORM)
 			var/obj/item/clothing/jacket = H.get_item_by_slot(SLOT_WEAR_SUIT)
 			if(!(suit.roomy == 1 && jacket.roomy == 1)) //If the clothes are "roomy" then don't do this.
-				var/datum/antagonist/changeling/changeling = M.mind.has_antag_datum(/datum/antagonist/changeling) 
+				var/datum/antagonist/changeling/changeling = M.mind.has_antag_datum(/datum/antagonist/changeling)
 				if(!changeling)//Changelings can in fact calm their tits
 				//End Hyper Change//
 					var/target = M.get_bodypart(BODY_ZONE_CHEST)
@@ -276,8 +276,8 @@
 			nP.prev_length = 1
 			M.reagents.remove_reagent(id, 5)
 			P = nP
-	
-	if(!T)//Hyper change// Adds testicles if there are none. 
+
+	if(!T)//Hyper change// Adds testicles if there are none.
 
 		//If they have Acute hepatic pharmacokinesis, then route processing though liver.
 		if(HAS_TRAIT(M, TRAIT_PHARMA))
@@ -309,7 +309,7 @@
 			var/obj/item/clothing/suit = H.get_item_by_slot(SLOT_W_UNIFORM)
 			var/obj/item/clothing/jacket = H.get_item_by_slot(SLOT_WEAR_SUIT)
 			if((!suit.roomy == 1 || !jacket.roomy == 1)) //If the clothes are "roomy" then don't do this.
-				var/datum/antagonist/changeling/changeling = M.mind.has_antag_datum(/datum/antagonist/changeling) 
+				var/datum/antagonist/changeling/changeling = M.mind.has_antag_datum(/datum/antagonist/changeling)
 				if(!changeling)//Changelings keep it in their pants
 				//End Hyper Change//
 					var/target = M.get_bodypart(BODY_ZONE_CHEST)
@@ -404,3 +404,4 @@
 		P.cached_length = P.cached_length + 0.1
 		P.update()
 	..()
+*/

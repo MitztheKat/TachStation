@@ -92,38 +92,17 @@
 	if(istype(target, /mob/living))
 		var/mob/living/victim = target
 		if(istype(victim, /mob/living/carbon/human))
-			if(user.zone_selected == "groin") // pp smol. There's probably a smarter way to do this but im retarded. If you have a simpler method let me know.
-				var/list/organs = victim.getorganszone("groin")
-				for(var/internal_organ in organs)
-					if(istype(internal_organ, /obj/item/organ/genital/penis))
-						var/obj/item/organ/genital/penis/O = internal_organ
-						playsound(get_turf(src), 'sound/weapons/flash.ogg', 50, 1)
-						victim.visible_message("<span class='warning'>[user] is preparing to shrink [victim]\'s [O.name] with their bluespace compression kit!</span>")
-						if(do_mob(user, victim, 40) && charges > 0 && O.length > 0)
-							victim.visible_message("<span class='warning'>[user] has shrunk [victim]\'s [O.name]!</span>")
-							playsound(get_turf(src), 'sound/weapons/emitter2.ogg', 50, 1)
-							sparks()
-							flash_lighting_fx(3, 3, LIGHT_COLOR_CYAN)
-							charges -= 1
-							O.length -= 5
-							if(O.length < 1)
-								victim.visible_message("<span class='warning'>[user]\'s [O.name] vanishes!</span>")
-								qdel(O) // no pp for you
-							else
-								O.update_size()
-								O.update_appearance()
-							return
-			else //shrink them overall
-				playsound(get_turf(src), 'sound/weapons/flash.ogg', 50, 1)
-				victim.visible_message("<span class='warning'>[user] is preparing to shrink [victim] with their bluespace compression kit!</span>")
-				if(do_mob(user, victim, 40) && charges > 0 && victim.size_multiplier > RESIZE_A_TINYMICRO)
-					victim.visible_message("<span class='warning'>[user] has shrunk [victim]!")
-					playsound(get_turf(src), 'sound/weapons/emitter2.ogg', 50, 1)
-					sparks()
-					flash_lighting_fx(3, 3, LIGHT_COLOR_CYAN)
-					charges -= 1
-					victim.resize(victim.size_multiplier-0.2)
-					return
+		 //shrink them overall
+			playsound(get_turf(src), 'sound/weapons/flash.ogg', 50, 1)
+			victim.visible_message("<span class='warning'>[user] is preparing to shrink [victim] with their bluespace compression kit!</span>")
+			if(do_mob(user, victim, 40) && charges > 0 && victim.size_multiplier > RESIZE_A_TINYMICRO)
+				victim.visible_message("<span class='warning'>[user] has shrunk [victim]!")
+				playsound(get_turf(src), 'sound/weapons/emitter2.ogg', 50, 1)
+				sparks()
+				flash_lighting_fx(3, 3, LIGHT_COLOR_CYAN)
+				charges -= 1
+				victim.resize(victim.size_multiplier-0.2)
+				return
 
 
 

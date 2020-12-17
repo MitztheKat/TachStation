@@ -35,7 +35,7 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 	5.3 Other similar things exist already though in the codebase; impostors, split personalites, abductors, ect.
 6. Giving this to someone without concent is against space law and gets you sent to gulag.
 */
-
+/*
 //Clone serum #chemClone
 /datum/reagent/fermi/SDGF //vars, mostly only care about keeping track if there's a player in the clone or not.
 	name = "synthetic-derived growth factor"
@@ -367,3 +367,4 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 		if(87 to INFINITY)
 			M.adjustToxLoss(1, 0)
 	..()
+*/

@@ -8,7 +8,6 @@
 /mob/living/carbon/human/Initialize()
 	verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
-	verbs += /mob/living/carbon/human/proc/underwear_toggle //fwee
 	time_initialized = world.time
 
 	//initialize limbs first
@@ -636,7 +635,6 @@
 	undershirt = "Nude"
 	update_body()
 	update_hair()
-	update_genitals()
 
 /mob/living/carbon/human/singularity_pull(S, current_size)
 	..()

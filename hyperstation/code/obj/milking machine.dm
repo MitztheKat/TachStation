@@ -1,4 +1,4 @@
-/obj/item/milking_machine
+/*/obj/item/milking_machine
 	icon = 'hyperstation/icons/obj/milking_machine.dmi'
 	name = "milking machine"
 	icon_state = "Off"
@@ -81,3 +81,4 @@
 /obj/item/milking_machine/penis/UpdateIcon()
 	icon_state = "Penis[on ? "On" : "Off"][inserted_item ? "Beaker" : ""]"
 	item_state = icon_state
+*/
