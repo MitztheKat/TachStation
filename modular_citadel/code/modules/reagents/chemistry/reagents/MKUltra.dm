@@ -128,7 +128,7 @@ Blowing up the reaction produces a gas that causes everyone to fall in love with
 
 Creating a chem with a low purity will make you permanently fall in love with someone, and tasked with keeping them safe. If someone else drinks it, you fall for them.
 */
-
+/*
 /datum/reagent/fermi/enthrall
 	name = "MKUltra"
 	id = "enthrall"
@@ -369,3 +369,4 @@ Creating a chem with a low purity will make you permanently fall in love with so
 
 //For addiction see chem.dm
 //For vocal commands see vocal_cords.dm
+*/

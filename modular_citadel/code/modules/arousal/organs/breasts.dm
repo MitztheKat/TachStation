@@ -1,4 +1,4 @@
-/obj/item/organ/genital/breasts
+/*/obj/item/organ/genital/breasts
 	name 					= "breasts"
 	desc 					= "Female milk producing organs."
 	icon_state 				= "breasts"
@@ -162,3 +162,4 @@
 		size = "giga"
 	else if (cached_size >= 30)
 		size = "impossible"
+*/

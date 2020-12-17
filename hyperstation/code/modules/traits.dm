@@ -1,4 +1,4 @@
-
+/*
 
 //Jay Sparrow
 /datum/quirk/cum_plus
@@ -31,3 +31,5 @@
 		if(T.fluid_max_volume <= 5 || T.fluid_mult <= 0.2) //INVALID EXPRESSION?
 			T.fluid_mult = 1.5 //Base is 0.133
 			T.fluid_max_volume = 5
+
+		*/

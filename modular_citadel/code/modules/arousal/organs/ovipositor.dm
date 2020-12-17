@@ -1,4 +1,4 @@
-/obj/item/organ/genital/ovipositor
+/*/obj/item/organ/genital/ovipositor
 	name = "Ovipositor"
 	desc = "An egg laying reproductive organ."
 	icon_state = "ovi_knotted_2"
@@ -14,3 +14,4 @@
 	var/knot_girth_ratio = KNOT_GIRTH_RATIO_DEF
 	var/list/oviflags = list()
 	var/obj/item/organ/eggsack/linked_eggsack
+*/

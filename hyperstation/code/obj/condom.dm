@@ -1,6 +1,6 @@
 //Made by quotefox
 //Really needs some work, mainly because condoms should be a container for semen, but I dont know how that works yet. Feel free to improve upon.
-
+/*
 /obj/item/condom
 	name 				= "condom"
 	desc 				= "Dont be silly, cover your willy!"
@@ -102,3 +102,4 @@
 		P.condom = 0
 		P.colourtint = ""
 		src.update_genitals()
+*/

@@ -573,7 +573,7 @@
 			L.SpinAnimation(speed = 10, loops = 5)
 
 	//CITADEL CHANGES
-	//ORGASM
+	/*ORGASM
 	else if((findtext(message, orgasm_words)))
 		cooldown = COOLDOWN_MEME
 		for(var/V in listeners)
@@ -599,8 +599,7 @@
 	else if((findtext(message, bwoink_words)))
 		cooldown = COOLDOWN_MEME
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, get_turf(user), 'sound/effects/adminhelp.ogg', 300, 1), 25)
-	//END CITADEL CHANGES
-
+*/
 	else
 		cooldown = COOLDOWN_NONE
 
@@ -615,7 +614,7 @@
 ///////ENTHRAL VELVET CHORDS//////////
 //////////////////////////////////////
 
-//Heavily modified voice of god code
+/*Heavily modified voice of god code
 /obj/item/organ/vocal_cords/velvet
 	name = "Velvet chords"
 	desc = "The voice spoken from these just make you want to drift off, sleep and obey."
@@ -649,11 +648,11 @@
 /obj/item/organ/vocal_cords/velvet/handle_speech(message) //actually say the message
 	owner.say(message, spans = spans, sanitize = FALSE)
 	velvetspeech(message, owner, 1)
-
+*/
 //////////////////////////////////////
 ///////////FermiChem//////////////////
 //////////////////////////////////////
-//Removed span_list from input arguments.
+/*Removed span_list from input arguments.
 /proc/velvetspeech(message, mob/living/user, base_multiplier = 1, message_admins = FALSE, debug = FALSE)
 
 	if(!user || !user.can_speak() || user.stat)
@@ -1123,7 +1122,7 @@
 					E.cooldown += 6
 				else
 					H.throw_at(get_step_towards(user,H), 3 * power_multiplier, 1 * power_multiplier)
-	
+
 
 
 	//awoo
@@ -1469,7 +1468,7 @@
 
 	return
 
-
+*/
 #undef COOLDOWN_STUN
 #undef COOLDOWN_DAMAGE
 #undef COOLDOWN_MEME

@@ -1,4 +1,4 @@
-//Jay
+/*Jay
 //TODO: Better sprites
 //Rope
 /obj/item/restraints/handcuffs/rope/ //Fun
@@ -53,3 +53,4 @@
 	time = 40
 	reqs = list(/obj/item/stack/sheet/cloth = 5)
 	category = CAT_MISC
+*/

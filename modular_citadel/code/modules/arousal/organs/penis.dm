@@ -1,4 +1,4 @@
-/obj/item/organ/genital/penis
+/*/obj/item/organ/genital/penis
 	name 					= "penis"
 	desc 					= "A male reproductive organ."
 	icon_state 				= "penis"
@@ -102,3 +102,4 @@
 		if(linked_organ)
 			linked_organ.linked_organ = null
 		linked_organ = null
+*/

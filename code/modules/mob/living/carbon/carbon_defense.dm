@@ -285,17 +285,10 @@
 		else if(check_zone(M.zone_selected) == "head")
 			var/mob/living/carbon/human/H = src
 			var/datum/species/pref_species = H.dna.species
-			
-			if(HAS_TRAIT(H, TRAIT_HEADPAT_SLUT))
-				M.visible_message("<span class='notice'>[M] gives [H] a pat on the head to make [p_them()] feel better! They seem incredibly pleased!</span>", \
-							"<span class='notice'>You give [H] a pat on the head to make [p_them()] feel better! They seem to like it way too much</span>")
-				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "lewd_headpat", /datum/mood_event/lewd_headpat)
-				H.adjustArousalLoss(5) //Headpats are hot af
-			else 
-				M.visible_message("<span class='notice'>[M] gives [H] a pat on the head to make [p_them()] feel better!</span>", \
-						"<span class='notice'>You give [H] a pat on the head to make [p_them()] feel better!</span>")
-				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "headpat", /datum/mood_event/headpat)
-				
+			M.visible_message("<span class='notice'>[M] gives [H] a pat on the head to make [p_them()] feel better!</span>", \
+					"<span class='notice'>You give [H] a pat on the head to make [p_them()] feel better!</span>")
+			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "headpat", /datum/mood_event/headpat)
+
 			if(HAS_TRAIT(M, TRAIT_FRIENDLY))
 				var/datum/component/mood/mood = M.GetComponent(/datum/component/mood)
 				if (mood.sanity >= SANITY_GREAT)

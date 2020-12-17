@@ -18,12 +18,10 @@
 					/obj/item/reagent_containers/glass/bottle/morphine = 4,
 					/obj/item/reagent_containers/glass/bottle/toxin = 3,
 					/obj/item/reagent_containers/syringe/antiviral = 6,
-					/obj/item/pregnancytest = 5,
 					/obj/item/storage/hypospraykit/fire = 2,
 					/obj/item/storage/hypospraykit/toxin = 2,
 					/obj/item/storage/hypospraykit/o2 = 2,
 					/obj/item/storage/hypospraykit/brute = 2,
-					/obj/item/storage/hypospraykit/enlarge = 2,
 					/obj/item/reagent_containers/glass/bottle/vial/small = 5)
 
 /obj/machinery/vending/wardrobe/chap_wardrobe
@@ -35,47 +33,23 @@
 #define COIN_CHARGE 3
 
 /obj/machinery/vending/kink
-	name = "KinkMate"
-	desc = "A vending machine for all your unmentionable desires."
+	name = "Broken vending machine"
+	desc = "A vending machine that used to be functional. most of the buyables have been banned."
 	icon = 'icons/obj/citvending.dmi'
 	icon_state = "kink"
-	product_slogans = "Kinky!;Sexy!;Check me out, big boy!"
-	vend_reply = "Have fun, you shameless pervert!"
+	product_slogans = null
+	vend_reply = "ERROR:PRODUCT NOT FOUND!"
 	products = list(
-				/obj/item/condom = 10,
-				/obj/item/sounding = 5,
 				/obj/item/clothing/head/maidband = 5,
 				/obj/item/clothing/under/maid = 5,
-				/obj/item/clothing/under/stripper_pink = 5,
-				/obj/item/clothing/under/stripper_green = 5,
-				/obj/item/dildo/custom = 5,
-				/obj/item/reagent_containers/pill/penis_enlargement = 3,
-				/obj/item/reagent_containers/pill/breast_enlargement = 3,
-				/obj/item/clothing/gloves/latexsleeves = 3,
-				/obj/item/clothing/shoes/highheels = 3,
-				/obj/item/clothing/under/polychromic/stripper = 3,
-				/obj/item/clothing/under/polychromic/bikini = 3,
-				/obj/item/clothing/under/polychromic/shortpants/pantsu = 3,
-				/obj/item/clothing/under/polychromic/bulge = 3,
-				/obj/item/clothing/suit/maidapron = 3,
-				/obj/item/clothing/under/corset = 3,
-				/obj/item/clothing/under/jabroni = 3
 				)
-	contraband = list(/obj/item/restraints/handcuffs/fake/kinky = 5,
+	contraband = list(
 				/obj/item/clothing/neck/petcollar = 5,
-				/obj/item/clothing/under/mankini = 1,
-				/obj/item/dildo/flared/huge = 1,
-				/obj/item/clothing/head/dominatrixcap = 1,
-				/obj/item/mesmetron = 1,
 				/obj/item/bdsm_whip = 1,
-				/obj/item/clothing/mask/muzzle = 1
 				)
 	premium = list(
-				/obj/item/electropack/shockcollar = 3,
 				/obj/item/clothing/neck/petcollar/locked = 1,
-				/obj/item/restraints/handcuffs/rope = 1,
 				/obj/item/leash = 1,
-				/obj/item/clothing/mask/muzzle/ballgag = 3
 				)
 	refill_canister = /obj/item/vending_refill/kink
 /*

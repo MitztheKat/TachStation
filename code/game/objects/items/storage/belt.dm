@@ -229,7 +229,7 @@
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/melee/baton/loaded(src)
 	update_icon()
-
+/*
 /obj/item/storage/belt/slut
 	name = "slutcurity belt"
 	desc = "Holds a variety of gear for \"alternative\" peacekeeping."
@@ -261,7 +261,7 @@ obj/item/storage/belt/slut/ComponentInitialize()
 		/obj/item/bdsm_whip,
 		/obj/item/clothing/mask/gas/sechailer/slut
 	))
-
+*/
 /obj/item/storage/belt/mining
 	name = "explorer's webbing"
 	desc = "A versatile chest rig, cherished by miners and hunters alike."
