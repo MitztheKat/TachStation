@@ -185,12 +185,12 @@
 	name = "Teal Lipstick"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/lipstick/teal
-
+	
 /datum/gear/lipstick_fuchsia
 	name = "Fuchsia Lipstick"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/lipstick/fuchsia
-
+	
 /datum/gear/lipstick_navy
 	name = "Navy Blue Lipstick"
 	category = SLOT_IN_BACKPACK
@@ -205,3 +205,15 @@
 	name = "White Lipstick"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/lipstick/white
+
+/datum/gear/condom
+	name = "Condom"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/condom
+	cost = 1
+
+/datum/gear/sounding
+	name = "Sounding rod"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/sounding
+	cost = 1

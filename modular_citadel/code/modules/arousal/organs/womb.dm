@@ -1,4 +1,4 @@
-/*/obj/item/organ/genital/womb
+/obj/item/organ/genital/womb
 	name 			= "womb"
 	desc 			= "A female reproductive organ."
 	icon			= 'modular_citadel/icons/obj/genitals/vagina.dmi'
@@ -45,4 +45,3 @@
 
 /obj/item/organ/genital/womb/Destroy()
 	return ..()
-*/

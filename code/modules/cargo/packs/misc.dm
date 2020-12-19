@@ -37,7 +37,7 @@
 	contains = list(/obj/item/pen/fountain/captain)
 	crate_name = "captain pen"
 	crate_type = /obj/structure/closet/crate/secure/weapon //It is a combat pen
-
+	
 /datum/supply_pack/misc/dueling_stam
 	name = "Dueling Pistols"
 	desc = "Resolve all your quarrels with some nonlethal fun."
@@ -264,7 +264,7 @@
 	cost = 10000
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "Jukebox"
-/*
+
 /datum/supply_pack/misc/lewd
 	name = "Lewd Crate" // OwO
 	desc = "Psss want to have a good time with your sluts? Well I got what you want! Maid clothing, dildos, collars and more!"
@@ -323,7 +323,7 @@
 					/obj/item/autosurgeon/breasts,
 					/obj/item/autosurgeon/womb)
 	crate_name = "promiscuous organs"
-*/
+
 /datum/supply_pack/misc/shower
 	name = "Shower Supplies"
 	desc = "Everyone needs a bit of R&R. Make sure you get can get yours by ordering this crate filled with towels, rubber duckies, and some soap!"

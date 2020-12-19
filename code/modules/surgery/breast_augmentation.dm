@@ -1,4 +1,4 @@
-/*/datum/surgery/breast_augmentation
+/datum/surgery/breast_augmentation
 	name = "Breast augmentation"
 	steps = list(/datum/surgery_step/incise, /datum/surgery_step/clamp_bleeders, /datum/surgery_step/retract_skin, /datum/surgery_step/augment_breasts, /datum/surgery_step/close)
 	species = list(/mob/living/carbon/human)
@@ -76,4 +76,3 @@
 			nB.Insert(target)
 			nB.update()
 			return 1
-*/

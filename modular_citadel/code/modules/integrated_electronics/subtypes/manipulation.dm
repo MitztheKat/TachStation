@@ -1,4 +1,4 @@
-/*/obj/item/integrated_circuit/manipulation/electric_stimulator
+/obj/item/integrated_circuit/manipulation/electric_stimulator
 	name = "electronic stimulation module"
 	desc = "Used to induce sexual stimulation in a target via electricity."
 	icon_state = "power_relay"
@@ -51,4 +51,3 @@
 		visible_message("<span class='warning'>\The [assembly] electrodes fail to shock [M]!</span>")
 		push_data()
 		activate_pin(3)
-*/

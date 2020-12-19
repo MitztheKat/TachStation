@@ -395,7 +395,7 @@
 					M.IgniteMob()
 				else
 					M.adjustToxLoss(1, 0)
-					M.adjustFireLoss(1, 0)
+					M.adjustFireLoss(1, 0)	
 	if(data >= 60)	// 30 units, 135 seconds
 		if(iscultist(M, FALSE, TRUE) || is_servant_of_ratvar(M, FALSE, TRUE))
 			if(iscultist(M))
@@ -2290,7 +2290,7 @@
 	color = "#888888"
 	taste_description = "chinese dragon powder"
 	metabolization_rate = INFINITY //So it instantly removes all of itself. Don't want to put strain on the system.
-/*
+
 /datum/reagent/penis_enlargement/on_mob_life(mob/living/carbon/C)
 	var/obj/item/organ/genital/penis/P = C.getorganslot(ORGAN_SLOT_PENIS)
 	if(P)
@@ -2299,7 +2299,7 @@
 			P.length += added_length
 			P.update()
 	..()
-*/
+
 /datum/reagent/changeling_string
 	name = "UNKNOWN"
 	id = "changeling_sting_real"
@@ -2350,6 +2350,7 @@
 		M.emote("nya")
 	if(prob(20))
 		to_chat(M, "<span class = 'notice'>[pick("Headpats feel nice.", "The feeling of a hairball...", "Backrubs would be nice.", "Whats behind those doors?")]</span>")
+	M.adjustArousalLoss(2)
 	..()
 
 // Adding new mutation toxin stuff from /code/modules/reagent/chemistry/recipes/slime_extracts.dm
@@ -2393,7 +2394,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/insect
 	mutationtext = "<span class='danger'>The pain subsides. You feel... oddly attracted to light.</span>"
-
+	
 /datum/reagent/mutationtoxin/ipc
 	name = "IPC Mutation Toxin"
 	id = "ipcmutationtoxin"

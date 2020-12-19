@@ -127,11 +127,11 @@
 		. += "[t_He] might be able to be picked up with <b>Alt+Click</b>!\n"
 
 	//CIT CHANGES START HERE - adds genital details to examine text
-/*	if(LAZYLEN(internal_organs))
+	if(LAZYLEN(internal_organs))
 		for(var/obj/item/organ/genital/dicc in internal_organs)
 			if(istype(dicc) && dicc.is_exposed())
 				. += "[dicc.desc]"
-*/
+
 	var/cursed_stuff = attempt_vr(src,"examine_bellies",args) //vore Code
 	if(!isnull(cursed_stuff))
 		. += cursed_stuff
@@ -162,7 +162,7 @@
 		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
-
+	
 	var/list/msg = list()
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
@@ -322,6 +322,13 @@
 				msg += "[t_He] appear[p_s()] to not be responding to noises.\n"
 
 	msg += "</span>"
+
+	var/obj/item/organ/vocal_cords/Vc = user.getorganslot(ORGAN_SLOT_VOICE)
+	if(Vc)
+		if(istype(Vc, /obj/item/organ/vocal_cords/velvet))
+			if(client?.prefs.lewdchem)
+				msg += "<span class='velvet'><i>You feel your chords resonate looking at them.</i></span>\n"
+
 
 	if(!appears_dead)
 		if(stat == UNCONSCIOUS)

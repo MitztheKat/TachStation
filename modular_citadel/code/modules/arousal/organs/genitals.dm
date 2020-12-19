@@ -1,4 +1,4 @@
-/*/obj/item/organ/genital
+/obj/item/organ/genital
 	color = "#fcccb3"
 	w_class 					= WEIGHT_CLASS_NORMAL
 	var/shape					= "Human" //Changed to be uppercase, let me know if this breaks everything..!!
@@ -422,4 +422,3 @@
 
 	for(var/L in relevant_layers)
 		H.apply_overlay(L)
-*/

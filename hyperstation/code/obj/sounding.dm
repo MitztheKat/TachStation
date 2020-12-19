@@ -1,4 +1,4 @@
-/*/obj/item/sounding
+/obj/item/sounding
 	name 				= "sounding rod"
 	desc 				= "Dont be silly, stuff your willy!"
 	icon 				= 'hyperstation/icons/obj/sounding.dmi'
@@ -66,4 +66,3 @@
 		new /obj/item/sounding/used_sounding(usr.loc)
 		P.sounding = 0
 		src.update_genitals()
-*/

@@ -21,8 +21,11 @@
 					  /obj/item/clothing/suit/armor/vest/stripper/bikini = 5,
 					  /obj/item/clothing/neck/petcollar/locked/security = 5,
 					  /obj/item/electropack/shockcollar/security = 5,
+					  /obj/item/storage/belt/slut = 5,
+					  /obj/item/clothing/mask/gas/sechailer/slut = 5,
 					  /obj/item/bdsm_whip/ridingcrop = 3,
-					  /obj/item/grenade/secbed = 3,)
+					  /obj/item/grenade/secbed = 3,
+					  /obj/item/dildo/flared/gigantic = 1)
 	premium = list(/obj/item/coin/antagtoken = 1,
 					/obj/item/clothing/head/helmet/blueshirt = 1,
 					/obj/item/clothing/suit/armor/vest/blueshirt = 1,

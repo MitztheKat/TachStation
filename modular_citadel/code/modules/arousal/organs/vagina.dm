@@ -1,4 +1,4 @@
-/*/obj/item/organ/genital/vagina
+/obj/item/organ/genital/vagina
 	name 					= "vagina"
 	desc 					= "A female reproductive organ."
 	icon					= 'modular_citadel/icons/obj/genitals/vagina.dmi'
@@ -72,4 +72,3 @@
 		if(linked_organ)
 			linked_organ.linked_organ = null
 		linked_organ = null
-*/

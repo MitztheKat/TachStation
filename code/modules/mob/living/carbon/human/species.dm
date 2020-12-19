@@ -303,7 +303,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 	SEND_SIGNAL(C, COMSIG_SPECIES_GAIN, src, old_species)
 
-/*CITADEL EDIT
+//CITADEL EDIT
 	if(NOAROUSAL in species_traits)
 		C.canbearoused = FALSE
 	else
@@ -314,7 +314,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(NOGENITALS in H.dna.species.species_traits)
 			H.give_genitals(TRUE) //call the clean up proc to delete anything on the mob then return.
 
-*/
+// EDIT ENDS
 
 /datum/species/proc/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
 	if(C.dna.species.exotic_bloodtype)
@@ -1583,12 +1583,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			"<span class='notice'>You slap [user == target ? "your" : "\the [target]'s"] ass!</span>",\
 			"You hear a slap."
 		)
-	/*	if (target.canbearoused)
+		if (target.canbearoused)
 			target.adjustArousalLoss(5)
 		if (target.getArousalLoss() >= 100 && ishuman(target) && HAS_TRAIT(target, TRAIT_MASO) && target.has_dna())
 			target.mob_climax(forced_climax=TRUE)
 		if (!HAS_TRAIT(target, TRAIT_NYMPHO))
-			stop_wagging_tail(target)*/
+			stop_wagging_tail(target)
 
 		return FALSE
 	else if(attacker_style && attacker_style.disarm_act(user,target))
@@ -1941,6 +1941,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if(BP)
 				if(damage > 0 ? BP.receive_damage(damage * hit_percent * brutemod * H.physiology.brute_mod, 0) : BP.heal_damage(abs(damage * hit_percent * brutemod * H.physiology.brute_mod), 0))
 					H.update_damage_overlays()
+					if(HAS_TRAIT(H, TRAIT_MASO))
+						H.adjustArousalLoss(damage * brutemod * H.physiology.brute_mod)
+						if (H.getArousalLoss() >= 100 && ishuman(H) && H.has_dna())
+							H.mob_climax(forced_climax=TRUE)
 
 			else//no bodypart, we deal damage with a more general method.
 				H.adjustBruteLoss(damage * hit_percent * brutemod * H.physiology.brute_mod)
@@ -1965,6 +1969,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				H.adjustStaminaLoss(damage * hit_percent * H.physiology.stamina_mod)
 		if(BRAIN)
 			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage * hit_percent * H.physiology.brain_mod)
+		if(AROUSAL)											//Citadel edit - arousal
+			H.adjustArousalLoss(damage * hit_percent)
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)

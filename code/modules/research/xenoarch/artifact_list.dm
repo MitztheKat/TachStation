@@ -7,6 +7,7 @@ GLOBAL_LIST_INIT(bas_artifact,list(	/obj/item/kitchen/fork=1,
 									/obj/item/trash/plate=1,
 									/obj/item/extendohand=1,
 									/obj/item/toy/plush/random=1,
+									/obj/item/clothing/head/condom=1,
 									/obj/item/ancientartifact/useless=11
 									))
 

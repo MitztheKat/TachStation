@@ -1,6 +1,6 @@
 #define DICK_MOVEMENT_SPEED "hugedick"
 #define BREAST_MOVEMENT_SPEED "megamilk"
-/*
+
 /datum/status_effect/chem/SGDF
 	id = "SGDF"
 	var/mob/living/fermi_Clone
@@ -29,9 +29,9 @@
 	to_chat(owner, "<span class='warning'>Lucidity shoots to your previously blank mind as your mind suddenly finishes the cloning process. You marvel for a moment at yourself, as your mind subconciously recollects all your memories up until the point when you cloned yourself. curiously, you find that you memories are blank after you ingested the sythetic serum, leaving you to wonder where the other you is.</span>")
 	to_chat(M, "<span class='warning'>Lucidity shoots to your previously blank mind as your mind suddenly finishes the cloning process. You marvel for a moment at yourself, as your mind subconciously recollects all your memories up until the point when you cloned yourself. curiously, you find that you memories are blank after you ingested the sythetic serum, leaving you to wonder where the other you is.</span>")
 	fermi_Clone = null
-*/
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
+
 /datum/status_effect/chem/breast_enlarger
 	id = "breast_enlarger"
 	alert_type = null
@@ -60,14 +60,14 @@
 /datum/status_effect/chem/breast_enlarger/tick(mob/living/carbon/human/H)//If you try to wear clothes, you fail. Slows you down if you're comically huge
 	var/mob/living/carbon/human/o = owner
 	var/obj/item/organ/genital/breasts/B = o.getorganslot("breasts")
-*/
+
 	// HYPER CHANGE: Speed modifier and damage removed.
 	/*moveCalc = 1+((round(B.cached_size) - 9)/3) //Afffects how fast you move, and how often you can click.
 	if(!B)
 		o.remove_movespeed_modifier(BREAST_MOVEMENT_SPEED)
 		sizeMoveMod(1)
 		owner.remove_status_effect(src)
-
+	*/
 	var/items = o.get_contents()
 	for(var/obj/item/W in items)
 		if(W == o.w_uniform || W == o.wear_suit)
@@ -79,7 +79,7 @@
 				o.dropItemToGround(W, TRUE)
 				playsound(o.loc, 'sound/items/poster_ripped.ogg', 50, 1)
 				to_chat(owner, "<span class='warning'>Your enormous breasts are way too large to fit anything over them!</b></span>")
-
+	/*
 	if (B.size == "huge")
 		if(prob(1))
 			to_chat(owner, "<span class='notice'>Your back is feeling sore.</span>")
@@ -95,7 +95,7 @@
 	else if (B.breast_values[B.size] < B.breast_values[B.prev_size])
 		o.add_movespeed_modifier(BREAST_MOVEMENT_SPEED, TRUE, 100, NONE, override = TRUE, multiplicative_slowdown = moveCalc)
 		sizeMoveMod(moveCalc)
-
+	*/
 	if((B.cached_size) < 40)
 		switch(round(B.cached_size))
 			if(9)
@@ -108,7 +108,7 @@
 			to_chat(owner, "<span class='notice'>Your back is feeling a little sore.</span>")
 		..()
 
-
+/*
 /datum/status_effect/chem/breast_enlarger/on_remove(mob/living/carbon/M)
 	log_game("FERMICHEM: [owner]'s breasts has reduced to an acceptable size. ID: [owner.key]")
 	owner.remove_movespeed_modifier(BREAST_MOVEMENT_SPEED)
@@ -120,7 +120,7 @@
 	owner.next_move_modifier /= cachedmoveCalc
 	owner.next_move_modifier *= value
 	cachedmoveCalc = value
-
+*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /datum/status_effect/chem/penis_enlarger
@@ -169,7 +169,7 @@
 		o.remove_movespeed_modifier(DICK_MOVEMENT_SPEED)
 		o.ResetBloodVol()
 		owner.remove_status_effect(src)
-
+	*/
 
 	var/items = o.get_contents()
 	for(var/obj/item/W in items)
@@ -206,21 +206,19 @@
 	log_game("FERMICHEM: [owner]'s dick has reduced to an acceptable size. ID: [owner.key]")
 	owner.remove_movespeed_modifier(DICK_MOVEMENT_SPEED)
 	owner.ResetBloodVol()
-
+*/
 
 /*//////////////////////////////////////////
 		Mind control functions
 ///////////////////////////////////////////
-
+*/
 
 //Preamble
-
+/*
 /mob/living
 	var/lewd = TRUE
 */
-*/
 
-*/
 /mob/living/verb/toggle_lewd()
 	set category = "IC"
 	set name = "Toggle Lewdchem"
@@ -806,4 +804,3 @@
 		deltaResist += 5//even faster!
 
 	return
-*/

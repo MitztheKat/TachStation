@@ -1,5 +1,5 @@
 // Citadel-specific Neutral Traits
-/*
+
 /datum/quirk/libido
 	name = "Nymphomania"
 	desc = "You're always feeling a bit in heat. Also, you get aroused faster than usual."
@@ -58,5 +58,4 @@
 	medical_record_text = "Patient poorly controls their fluids."
 	gain_text = "<span class='notice'>You feel like your leaking everywhere.</span>"
 	lose_text = "<span class='notice'>You feel like you can control your fluids.</span>"
-*/
 */

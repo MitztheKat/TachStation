@@ -1,7 +1,7 @@
 // Testing things
-/*/obj/effect/proc_holder/spell/self/Alteration_Mechanical
+/obj/effect/proc_holder/spell/self/Alteration_Mechanical
 	name = "Alter figure"
-	desc = "Change and alter your physical form."
+	desc = "Change and alter your physical form."  
 	human_req = 1
 	clothes_req = 0
 	charge_max = 100
@@ -60,7 +60,7 @@
 				organ.forceMove(get_turf(H))
 				qdel(organ)
 				H.update_genitals()
-
+    
 	else if (select_alteration == "Penis")
 		for(var/obj/item/organ/genital/penis/X in H.internal_organs)
 			qdel(X)
@@ -131,7 +131,7 @@
 				if(new_fluid_penis)
 					X.fluid_id = new_fluid_penis
 
-	else if(select_alteration == "Breast Production")
+	else if(select_alteration == "Breast Production")   
 		if(!H.getorganslot("breasts"))
 			to_chat(user, "You need functioning breasts for this to work.")
 		else
@@ -165,4 +165,3 @@
 
 	else
 		return
-		*/
